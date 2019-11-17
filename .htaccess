@@ -1,0 +1,10 @@
+# REMOVER EXTENSÕES DO URL
+RewriteEngine on 
+RewriteCond %{REQUEST_FILENAME} !-d 
+# quando arquivo for .php 
+RewriteCond %{REQUEST_FILENAME}\.php -f 
+RewriteRule ^(.*)$ $1.php
+# quando arquivo for .html
+RewriteCond %{REQUEST_FILENAME}\.html -f 
+RewriteRule ^(.*)$ $1.html
+
